@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import RecipeItem from './RecipeItem';
+import { Link } from 'react-router-dom';
 
 class FavoriteRecipeList extends Component {
     render() {
@@ -9,6 +10,8 @@ class FavoriteRecipeList extends Component {
 
         return (
             <div>
+                                <h4 className="link"><Link to="/">Home</Link></h4>
+
                 <h4>Favorite Recipes</h4>
                 {
                   this.props.favoriteRecipes ? this.props.favoriteRecipes.map((recipe, index) => {
